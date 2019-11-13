@@ -18,7 +18,7 @@
 
 
 # API info
-base URL: https://kefi-mentor-me.herokuapp.com'
+base URL: https://jesse-tingle-mentor-me.herokuapp.com
 
 Create: POST
 
@@ -26,7 +26,7 @@ Create: POST
 
 
 Read: GET
-https://kefi-mentor-me.herokuapp.com/api/questions
+https://jesse-tingle-mentor-me.herokuapp.com/api/questions
 
 - Returns an array of post objects
     - Returns an array of objects->each object is an individual question
@@ -57,17 +57,3 @@ Delete: DELETE
     business_type: "investing"
     photo: "",
     entrepreneur_username: "tardis"
-
-    id: 2,
-    title: "What is the current value of Facebook?"
-    question: "No one seems to be using Facebook except for old people and far relatives. Question is when will React, React Native and GraphWl form its own company and separate from Facebook. Those technologies deserve better!"
-    business_type: "ownership",
-    photo: "",
-    entrepreneur_username: "oswin"
-
-    id: 4,
-    title: "TEST ME, DELETE ME",
-    question: "Why is the sju blue?",
-    business_type: "reality",
-    photo: "",
-    entrepreneur_username: "oswin"

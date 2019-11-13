@@ -6,7 +6,17 @@ import App from './App';
 // React Router
 import { BrowserRouter } from 'react-router-dom';
 
+// Redux
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import { reducer } from './reducer/reducer';
+
+const store = createStore(reducer);
+
+
 ReactDOM.render(
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>, document.getElementById('root'));
+    <Provider store={store}>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </Provider>, document.getElementById('root'));
