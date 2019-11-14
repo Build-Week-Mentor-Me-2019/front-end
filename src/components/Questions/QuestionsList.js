@@ -5,11 +5,18 @@ axios and api is already set up with an api function
 instead of importing axios you will just use 
 
 api()
-    .get('')
+    .get('/api/questions')
     .then('')
     .catch('') 
 
+
+step 1) Map over the array of questions and render them to the screen
+
+step 2) Create Answers component
+
 */
+
+
 import api from '../utils/api';
 
 
