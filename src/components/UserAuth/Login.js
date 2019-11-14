@@ -12,8 +12,8 @@ function Login(props) {
     const [err, setErr] = useState('')
 
     const [data, setData] = useState({
-        username: '',
-        password: ''
+        username: 'elonmusk',
+        password: 'space'
     })
 
     const handleChange = (event) => {
@@ -34,13 +34,13 @@ function Login(props) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} disabled={props.loading} className={props.loading ? "transparent" : "regular"}>
             
             {err && <div className="err">{err}</div>}
 
             <input type="text" name="username" placeholder="username" value={data.username} onChange={handleChange} />
             <input type="text" name="password" placeholder="password" value={data.password} onChange={handleChange} />
-            <button type="submit">Log In</button>
+            <button disabled={props.loading} type="submit">Log In</button>
         </form>
     )
 }

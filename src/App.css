@@ -20,3 +20,12 @@
 .App-link {
   color: #09d3ac;
 }
+
+.transparent {
+  background: red;
+  opacity: .2;
+}
+
+.regular {
+  background: lightblue;
+}
