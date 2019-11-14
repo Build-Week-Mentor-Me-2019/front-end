@@ -7,11 +7,12 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 
 // Redux
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import { reducer } from './reducer/reducer';
+import thunk from 'redux-thunk';
 
-const store = createStore(reducer);
+const store = createStore(reducer, applyMiddleware(thunk));
 
 
 ReactDOM.render(

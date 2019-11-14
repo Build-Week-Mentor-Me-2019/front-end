@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import api from '../utils/api';
 
+import { login } from '../../actions/userActions';
+import { connect } from 'react-redux';
 
-
-export default function Login(props) {
+function Login(props) {
     console.log('login props', props)
 
     const [err, setErr] = useState('')
@@ -23,16 +24,12 @@ export default function Login(props) {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        api()
-            .post('/api/login', data)
-            .then(result => {
-                console.log('token', result.data)
-                localStorage.setItem('token', result.data.token)
-                props.history.push('/questions')
-            })
-            .catch(err => {
-                setErr(err.response)
-            })
+        props.login(data)
+        props.history.push('/questions')
+        setTimeout(function(){
+            window.location.reload()
+        }, 2500)
+        console.log('props.history', props.history)
     }
 
     return (
@@ -46,3 +43,5 @@ export default function Login(props) {
         </form>
     )
 }
+
+export default connect(null, {login})(Login);
