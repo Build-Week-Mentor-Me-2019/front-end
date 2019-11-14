@@ -11,15 +11,19 @@ import {  Route, Switch, withRouter } from 'react-router-dom';
 // Components
 import Login from './components/UserAuth/Login';
 import QuestionsList from './components/Questions/QuestionsList';
+import SignUp from './components/UserAuth/SignUp';
 
 
 function App() {
   return (
     <div className="App">
       <h1>App.js</h1>
+      {/* <SignUp /> */}
     
-    <Switch><Route exact path="/" component={Login} />
-    <ProtectedRoute exact path="/questions" component={QuestionsList} /></Switch>
+
+    <Route exact path="/" component={Login} />
+    <Route exact path="/signup" component={SignUp} />
+    <ProtectedRoute exact path="/questions" component={QuestionsList} />
     </div>
   );
 }

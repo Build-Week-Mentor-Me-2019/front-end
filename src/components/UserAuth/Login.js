@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import api from '../utils/api';
 
+import { Link } from 'react-router-dom'
+
 // import { initialState, reducer } from '../../reducer/loginReducer';
 
 import { login } from '../../actions/userActions';
@@ -34,6 +36,7 @@ function Login(props) {
     }
 
     return (
+        <div>
         <form onSubmit={handleSubmit} disabled={props.loading} className={props.loading ? "transparent" : "regular"}>
             
             {err && <div className="err">{err}</div>}
@@ -42,6 +45,9 @@ function Login(props) {
             <input type="text" name="password" placeholder="password" value={data.password} onChange={handleChange} />
             <button disabled={props.loading} type="submit">Log In</button>
         </form>
+
+        <Link to="/signup">Sign Up</Link>
+        </div>
     )
 }
 

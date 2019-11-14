@@ -29,17 +29,16 @@ export const login = (creds, props) => dispatch => {
 
 export const register = (creds, props) => dispatch => {
   dispatch({ type: LOADING });
-  return axios
-    .post(
-      "https://jesse-tingle-mentor-me.herokuapp.com/api/register/user",
-      creds
-    )
-    .then(res => {
-      localStorage.setItem("token", res.data.token);
-      dispatch({
-        type: NEW_USER_SUCCESS
-      });
-      props.history.push("/questions");
-    })
-    .catch(err => console.log(err.response));
+  return setTimeout(() => {
+    return axios
+      .post("https://jesse-tingle-mentor-me.herokuapp.com/api/register/user", creds)
+      .then(res => {
+        localStorage.setItem("token", res.data.token);
+        dispatch({
+          type: NEW_USER_SUCCESS
+        });
+        props.history.push("/");
+      })
+      .catch(err => console.log(err.response));
+  }, 2000);
 };

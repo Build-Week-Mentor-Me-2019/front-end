@@ -29,3 +29,9 @@
 .regular {
   background: lightblue;
 }
+
+.radio-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
