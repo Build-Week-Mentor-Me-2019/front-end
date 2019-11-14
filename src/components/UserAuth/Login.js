@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import api from '../utils/api';
 
+// import { initialState, reducer } from '../../reducer/loginReducer';
+
 import { login } from '../../actions/userActions';
 import { connect } from 'react-redux';
 
@@ -24,11 +26,10 @@ function Login(props) {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        props.login(data)
-        props.history.push('/questions')
-        setTimeout(function(){
-            window.location.reload()
-        }, 2500)
+        props.login(data, props)
+        // setTimeout(function(){
+        //     window.location.reload()
+        // }, 2500)
         console.log('props.history', props.history)
     }
 
@@ -44,4 +45,10 @@ function Login(props) {
     )
 }
 
-export default connect(null, {login})(Login);
+function mapStateToProps(state) {
+    return {
+        loading: state.loading
+    }
+}
+
+export default connect(mapStateToProps, {login})(Login);
