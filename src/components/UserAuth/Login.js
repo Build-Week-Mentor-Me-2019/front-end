@@ -29,9 +29,6 @@ function Login(props) {
         e.preventDefault()
 
         props.login(data, props)
-        // setTimeout(function(){
-        //     window.location.reload()
-        // }, 2500)
         console.log('props.history', props.history)
     }
 

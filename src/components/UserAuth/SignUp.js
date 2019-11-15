@@ -29,9 +29,6 @@ function Signup(props) {
         e.preventDefault()
 
         props.register(data, props)
-        // setTimeout(function(){
-        //     window.location.reload()
-        // }, 2500)
         console.log('props.history', props.history)
     }
 

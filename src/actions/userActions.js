@@ -7,7 +7,6 @@ export const NEW_USER_SUCCESS = "NEW_USER_SUCCESS";
 // export const UPDATE_USER = 'UPDATE_USER';
 // export const DELETE_USER = 'DELETE_USER';
 // export const LOGIN_START = 'LOGIN_START';
-//
 // export const LOGIN_FAILURE = 'LOGIN_FAILURE';
 
 export const login = (creds, props) => dispatch => {

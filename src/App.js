@@ -6,7 +6,7 @@ import ProtectedRoute from './components/utils/ProtectedRoute';
 
 
 // Browser Router
-import {  Route, Switch, withRouter } from 'react-router-dom';
+import {  Route, Switch, withRouter, NavLink } from 'react-router-dom';
 
 // Components
 import Login from './components/UserAuth/Login';
@@ -17,13 +17,22 @@ import SignUp from './components/UserAuth/SignUp';
 function App() {
   return (
     <div className="App">
-      <h1>App.js</h1>
-      {/* <SignUp /> */}
-    
+      <nav className="navbar bg-primary">
+          <NavLink to="/"><h1>Mentor Me</h1></NavLink>
 
-    <Route exact path="/" component={Login} />
+          <div>
+            <NavLink to="/login">Log In</NavLink>
+            <NavLink to="/signup">Sign Up</NavLink>
+          </div>
+      </nav>
+
+      
+      {/* <SignUp /> */}
+      {/* <QuestionsList /> */}
+    <Route exact path="/" component={QuestionsList} />
+    <Route exact path="/login" component={Login} />
     <Route exact path="/signup" component={SignUp} />
-    <ProtectedRoute exact path="/questions" component={QuestionsList} />
+    
     </div>
   );
 }
