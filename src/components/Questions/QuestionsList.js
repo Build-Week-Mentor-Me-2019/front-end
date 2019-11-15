@@ -25,6 +25,7 @@ export default function QuestionsList() {
     return (
         <div>
             <h1>Questions List Component</h1>
+
         </div>
     )
 }
