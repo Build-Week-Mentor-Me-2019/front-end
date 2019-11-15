@@ -36,7 +36,7 @@ export const register = (creds, props) => dispatch => {
         dispatch({
           type: NEW_USER_SUCCESS
         });
-        props.history.push("/");
+        props.history.push("/login");
       })
       .catch(err => console.log(err.response));
   }, 2000);
