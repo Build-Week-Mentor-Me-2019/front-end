@@ -20,7 +20,7 @@ export const login = (creds, props) => dispatch => {
         dispatch({
           type: LOGIN_SUCCESS
         });
-        props.history.push("/questions");
+        props.history.push("/");
       })
       .catch(err => console.log(err.response));
   }, 2000);

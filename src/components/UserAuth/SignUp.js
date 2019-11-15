@@ -33,7 +33,7 @@ function Signup(props) {
     }
 
     return (
-        <form onSubmit={handleSubmit} disabled={props.loading} className={props.loading ? "transparent" : "regular"}>
+        <form onSubmit={handleSubmit} disabled={props.loading} /* className={props.loading ? "transparent" : "regular"}*/ >
             
             {err && <div className="err">{err}</div>}
 
