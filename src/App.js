@@ -6,14 +6,12 @@ import ProtectedRoute from './components/utils/ProtectedRoute';
 
 
 // Browser Router
-
 import {  Route, Switch, withRouter, NavLink } from 'react-router-dom';
 
 // Components
 import Login from './components/UserAuth/Login';
 import QuestionsList from './components/Questions/QuestionsList';
 import SignUp from './components/UserAuth/SignUp';
-
 
 
 function App() {

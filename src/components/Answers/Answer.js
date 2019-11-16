@@ -6,7 +6,7 @@ axios and api is already set up with an api function
 instead of importing axios you will just use
 
 api()
-    .get('/api/api/answers/:id')
+    .get('/api/answers/:id')
     .then('')
     .catch('')
 
