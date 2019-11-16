@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-
+import Answer from './components/Answers/Answer'
 // Protected Route
 import ProtectedRoute from './components/utils/ProtectedRoute';
 
