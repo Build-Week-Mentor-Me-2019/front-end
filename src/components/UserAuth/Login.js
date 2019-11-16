@@ -29,24 +29,20 @@ function Login(props) {
         e.preventDefault()
 
         props.login(data, props)
-        // setTimeout(function(){
-        //     window.location.reload()
-        // }, 2500)
         console.log('props.history', props.history)
     }
 
     return (
         <div>
-        <form onSubmit={handleSubmit} disabled={props.loading} className={props.loading ? "transparent" : "regular"}>
-            
-            {err && <div className="err">{err}</div>}
+            <form onSubmit={handleSubmit} disabled={props.loading} /* className={props.loading ? "transparent" : "regular"}*/ >
+                
+                {err && <div className="err">{err}</div>}
 
-            <input type="text" name="username" placeholder="username" value={data.username} onChange={handleChange} />
-            <input type="text" name="password" placeholder="password" value={data.password} onChange={handleChange} />
-            <button disabled={props.loading} type="submit">Log In</button>
-        </form>
+                <input type="text" name="username" placeholder="username" value={data.username} onChange={handleChange} />
+                <input type="text" name="password" placeholder="password" value={data.password} onChange={handleChange} />
+                <button disabled={props.loading} type="submit">Log In</button>
+            </form>
 
-        <Link to="/signup">Sign Up</Link>
         </div>
     )
 }
