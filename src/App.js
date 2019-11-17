@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Answer from './components/Answers/Answer'
 // Protected Route
 import ProtectedRoute from './components/utils/ProtectedRoute';
 
@@ -12,6 +11,7 @@ import {  Route, Switch, withRouter, NavLink } from 'react-router-dom';
 import Login from './components/UserAuth/Login';
 import QuestionsList from './components/Questions/QuestionsList';
 import SignUp from './components/UserAuth/SignUp';
+import AnswerForm from './components/Answers/AnswerForm'
 
 
 function App() {
@@ -26,9 +26,8 @@ function App() {
           </div>
       </nav>
 
+    <AnswerForm />
       
-      {/* <SignUp /> */}
-      {/* <QuestionsList /> */}
     <Route exact path="/" component={QuestionsList} />
     <Route exact path="/login" component={Login} />
     <Route exact path="/signup" component={SignUp} />

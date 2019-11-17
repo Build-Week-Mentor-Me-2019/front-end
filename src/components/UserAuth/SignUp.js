@@ -3,7 +3,7 @@ import api from '../utils/api';
 
 // import { initialState, reducer } from '../../reducer/loginReducer';
 
-import { register } from '../../actions/userActions';
+import { register } from '../../redux/actions/userActions';
 import { connect } from 'react-redux';
 
 function Signup(props) {
