@@ -13,7 +13,7 @@ export default function Question(props) {
       <p>Entrepreneur Username: {props.entrepreneur}</p>
 
       <AnswerList  questionid={props.questionid} />
-      <AnswerForm />
+      <AnswerForm questionid={props.questionid} />
     </div>
   );
 }
