@@ -25,12 +25,12 @@ export default function QuestionsList() {
 
     useEffect(() => {
         api()
-            .get(`/api/questions/id`)
+            .get(`/api/questions`)
             .then(response => {
-                const quest = response.data;
-                console.log("its working", quest)
+                //const quest = response.data;
+                console.log(response.data)
                 //nothing is returned when I console.log//
-                setQuestions(quest);
+                //setQuestions(quest);
             })
             .catch(error => {
                 console.log("questions not displayed", error);
