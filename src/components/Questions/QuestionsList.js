@@ -27,10 +27,10 @@ export default function QuestionsList() {
         api()
             .get(`/api/questions`)
             .then(response => {
-                //const quest = response.data;
+                const quest = response.data;
                 console.log(response.data)
                 //nothing is returned when I console.log//
-                //setQuestions(quest);
+                setQuestions(quest);
             })
             .catch(error => {
                 console.log("questions not displayed", error);
@@ -44,12 +44,12 @@ export default function QuestionsList() {
             {questions.map(entry => {
                 return (
                     <Question key={entry.id}
-                        questid={entry.id}
+                        questionid={entry.id}
                         title={entry.title}
                         question={entry.question}
                         business={entry.business_type}
                         //img={entry.photo} stretch goal//
-                        username={entry.entrepreneur_username}
+                        e_username={entry.entrepreneur_username}
                         />
                         );
                     })}

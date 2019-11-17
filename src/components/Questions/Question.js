@@ -9,11 +9,16 @@ const Question = props => {
                 src={props.img}
                 alt="e-avatar"
                 /> */}
-            <h3>{props.username}</h3>
+            <h3>{props.e_username}</h3>
             
             <h1>{props.title}</h1>
             <h2>Q: {props.question}</h2>
             <p>Business: {props.business}</p>
+
+
+{/* 
+
+            //Hutch the variable name you will need for the Answer List component is questionid={props.questionid} */}
         </div>
     )
 }
