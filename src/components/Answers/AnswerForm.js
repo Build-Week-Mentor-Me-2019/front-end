@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux';
 import { fetchPosts } from '../../redux/actions/postActions';
 
@@ -6,13 +6,16 @@ import { fetchPosts } from '../../redux/actions/postActions';
 Step 1) Create a form to submit a new answer to a question
 */
 
-class AnswerForm extends Component {
+function AnswerForm(props) {
 
-    componentWillMount() {
-        this.props.fetchPosts()
-    }
+    // componentWillMount() {
+    //     this.props.fetchPosts()
+    // }
+
+    useEffect(() => {
+        props.fetchPosts()
+    }, [])
      
-    render(){
         return (
         // <form>
         //     <textarea name="answer"   />
@@ -21,11 +24,14 @@ class AnswerForm extends Component {
         // </form>
 
         <div>
-
+            {console.log('answer form console.log testing', props.posts)}
         </div>
     )
-    }
     
 }
 
-export default connect(null, {fetchPosts})(AnswerForm);
+const mapStateToProps = state => ({
+    posts: state.posts.items
+})
+
+export default connect(mapStateToProps, {fetchPosts})(AnswerForm);

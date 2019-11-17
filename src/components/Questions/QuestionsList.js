@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 
 /* 
 axios and api is already set up with an api function 
@@ -16,16 +16,44 @@ step 2) Create Answers component
 
 */
 
+import api from "../utils/api";
+import Question from "./Question";
 
-import api from '../utils/api';
-
-
+// title: '',
+// question: '',
+// business_type: '',
+// photo: '',
+// entrepreneur_username: ''
 
 export default function QuestionsList() {
-    return (
-        <div>
-            <h1>Questions List Component</h1>
+  const [questions, setQuestions] = useState([]);
 
-        </div>
-    )
+  useEffect(() => {
+    api()
+      .get(`/api/questions`)
+      .then(res => {
+        console.log(res.data);
+        setQuestions(res.data);
+      })
+      .catch(err => {
+        console.log("Questions Error", err);
+      });
+  }, []);
+
+  return (
+    <div>
+      {questions.map(item => {
+        return (
+          <Question
+            key={item.id}
+            questionid={item.id}
+            title={item.title}
+            question={item.question}
+            business={item.business_type}
+            entrepreneur={item.entrepreneur_username}
+          />
+        );
+      })}
+    </div>
+  );
 }
