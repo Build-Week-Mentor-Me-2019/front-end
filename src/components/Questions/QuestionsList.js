@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Question from './Question';
 
 /* 
 axios and api is already set up with an api function 
@@ -38,7 +39,7 @@ export default function QuestionsList() {
 
     return (
         <div>
-            <h1>Questions List Component</h1>
+            {/* <h1>Questions List Component</h1> */}
 
             {questions.map(entry => {
                 return (
@@ -47,7 +48,7 @@ export default function QuestionsList() {
                         title={entry.title}
                         question={entry.question}
                         business={entry.business_type}
-                        //photo??//
+                        //img={entry.photo} photo??//
                         username={entry.entrepreneur_username}
                         />
                         )
