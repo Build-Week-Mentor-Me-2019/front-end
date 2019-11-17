@@ -3,7 +3,7 @@ import api from '../utils/api';
 
 // import { initialState, reducer } from '../../reducer/loginReducer';
 
-import { register } from '../../actions/userActions';
+import { register } from '../../redux/actions/userActions';
 import { connect } from 'react-redux';
 
 function Signup(props) {
@@ -29,14 +29,11 @@ function Signup(props) {
         e.preventDefault()
 
         props.register(data, props)
-        // setTimeout(function(){
-        //     window.location.reload()
-        // }, 2500)
         console.log('props.history', props.history)
     }
 
     return (
-        <form onSubmit={handleSubmit} disabled={props.loading} className={props.loading ? "transparent" : "regular"}>
+        <form onSubmit={handleSubmit} disabled={props.loading} /* className={props.loading ? "transparent" : "regular"}*/ >
             
             {err && <div className="err">{err}</div>}
 
