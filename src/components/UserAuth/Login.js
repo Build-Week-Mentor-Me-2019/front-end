@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 // import { initialState, reducer } from '../../reducer/loginReducer';
 
-import { login } from '../../actions/userActions';
+import { login } from '../../redux/actions/userActions';
 import { connect } from 'react-redux';
 
 function Login(props) {
