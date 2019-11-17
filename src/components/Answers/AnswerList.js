@@ -57,18 +57,16 @@ export default function AnswerList(props) {
     })} */}
 
       {answers.map(answer => {
-        {
-          if (questionId == answer.question_id) {
-            return (
-              <Answer
-                key={answer.id}
-                answer={answer.answer}
-                question_id={answer.question_id}
-                bus_owner_username={answer.bus_owner_username}
-              />
-            )
-          } else return null;
-        }
+        if (questionId === answer.question_id) {
+          return (
+            <Answer
+              key={answer.id}
+              answer={answer.answer}
+              question_id={answer.question_id}
+              bus_owner_username={answer.bus_owner_username}
+            />
+          )
+        } else return null
       })}
     </section>
   )
