@@ -1,9 +1,9 @@
 import React from 'react';
+//import styled from 'styled-components'
 
 const Question = props => {
-
     return (
-        <div className="question-bar">
+        <div className="question-bar" key={props.id}>
             {/* <img
                 className="entrepreneur-avatar"
                 src={props.img}

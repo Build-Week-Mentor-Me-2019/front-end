@@ -27,8 +27,8 @@ export default function QuestionsList() {
         api()
             .get(`/api/questions/id`)
             .then(response => {
-                const quest = response.data.message;
-                console.log(quest);
+                const quest = response.data;
+                console.log("its working", quest)
                 //nothing is returned when I console.log//
                 setQuestions(quest);
             })
@@ -48,10 +48,10 @@ export default function QuestionsList() {
                         title={entry.title}
                         question={entry.question}
                         business={entry.business_type}
-                        //img={entry.photo} photo??//
+                        //img={entry.photo} stretch goal//
                         username={entry.entrepreneur_username}
                         />
-                        )
+                        );
                     })}
         </div>
     );
