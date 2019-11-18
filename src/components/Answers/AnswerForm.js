@@ -46,7 +46,7 @@ function AnswerForm(props) {
     }
 
         return (
-        <form onSubmit={handleSubmit}>
+        <form className="answer-form" onSubmit={handleSubmit}>
             <textarea name="answer" placeholder="Answer" value={newAnswer.answer} onChange={handleChange}  />
             <br />
             {/* <input name="question_id" placeholder="Question ID" value={newAnswer.question_id} onChange={handleChange} />

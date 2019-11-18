@@ -1,54 +1,53 @@
 import React, { useState, useEffect } from "react";
 import api from "../utils/api";
+import Answer from "./Answer";
 /*
-
 axios and api is already set up with an api function
 instead of importing axios you will just use
-
 api()
-    .get('/api/answers/')
+    .get('/api/answers/:id')
     .then('')
     .catch('')
-
-
-
-
 step 1) Match question with answer
 step 2) Display answer in component below
 step 3) render Answer component below question in QuestionsList.js
-
 */
 
-import Answer from "./Answer";
-
 export default function AnswerList(props) {
+  // Here I am setting a slice of state for the id value that I will get from my API call, and another slice for the questionId, which I expect to recieve on props. (Awaiting prop from Whitney)
+  // I am then using the hook a third time to create a slice for the answer, which will come from somewhere. (AnswerList? QuestionList?)
 
+  const [questionId] = useState(props.question_id);
   const [answers, setAnswers] = useState([]);
-  const [questionID] = useState(props.questionid)
-  console.log('question id from props set to state', questionID)
 
+  // Making my API call...
   useEffect(() => {
     api()
       .get(`/api/answers`)
       .then(res => {
-        console.log("answer console.log", res.data);
         setAnswers(res.data);
       })
       .catch(err => {
         console.log("Error, data was not returned from server", err);
       });
   }, []);
+  //  Syncing state with my async API call...
 
   return (
     <section className="answers">
-      <div>
-        {answers.map(item => {
-          {if(questionID == item.question_id) {
-              return ( <Answer key={item.id} answer={item.answer} question_id={item.question_id} bus_owner_username={item.bus_owner_username} /> )
-          } else return null
-        }
-        })}
-      </div>
+
+      {answers.map(answer => {
+        if (questionId === answer.question_id) {
+          return (
+            <Answer
+              key={answer.id}
+              answer={answer.answer}
+              question_id={answer.question_id}
+              bus_owner_username={answer.bus_owner_username}
+            />
+          );
+        } else return null;
+      })}
     </section>
   );
 }
