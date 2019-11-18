@@ -16,7 +16,7 @@ export const login = (creds, props) => dispatch => {
       .post("https://jesse-tingle-mentor-me.herokuapp.com/api/login", creds)
       .then(res => {
         localStorage.setItem("token", res.data.token);
-
+        console.log('login data', res)
         dispatch({
           type: LOGIN_SUCCESS
         });
