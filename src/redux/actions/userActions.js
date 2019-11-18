@@ -1,13 +1,7 @@
 import axios from "axios";
+import {LOADING, LOGIN_SUCCESS, NEW_USER_SUCCESS} from './types';
 
-export const LOADING = "LOADING";
-export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
-export const ERROR = "ERROR";
-export const NEW_USER_SUCCESS = "NEW_USER_SUCCESS";
-// export const UPDATE_USER = 'UPDATE_USER';
-// export const DELETE_USER = 'DELETE_USER';
-// export const LOGIN_START = 'LOGIN_START';
-// export const LOGIN_FAILURE = 'LOGIN_FAILURE';
+
 
 export const login = (creds, props) => dispatch => {
   dispatch({ type: LOADING });
@@ -16,7 +10,7 @@ export const login = (creds, props) => dispatch => {
       .post("https://jesse-tingle-mentor-me.herokuapp.com/api/login", creds)
       .then(res => {
         localStorage.setItem("token", res.data.token);
-
+        console.log('login username', res)
         dispatch({
           type: LOGIN_SUCCESS
         });
