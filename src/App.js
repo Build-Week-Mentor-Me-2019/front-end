@@ -1,17 +1,18 @@
 import React from 'react';
 import './App.css';
+
 // Protected Route
-import ProtectedRoute from './components/utils/ProtectedRoute';
+// import ProtectedRoute from './components/utils/ProtectedRoute';
 
 
 // Browser Router
-import {  Route, Switch, withRouter, NavLink } from 'react-router-dom';
+import {  Route, withRouter, NavLink } from 'react-router-dom';
 
 // Components
 import Login from './components/UserAuth/Login';
 import QuestionsList from './components/Questions/QuestionsList';
 import SignUp from './components/UserAuth/SignUp';
-import AnswerForm from './components/Answers/AnswerForm'
+import AnswerList from './components/Answers/AnswerList';
 
 
 function App() {
@@ -25,9 +26,10 @@ function App() {
             <NavLink to="/signup">Sign Up</NavLink>
           </div>
       </nav>
-
-    <AnswerForm />
       
+      
+      {/* <SignUp /> */}
+      {/* <QuestionsList /> */}
     <Route exact path="/" component={QuestionsList} />
     <Route exact path="/login" component={Login} />
     <Route exact path="/signup" component={SignUp} />

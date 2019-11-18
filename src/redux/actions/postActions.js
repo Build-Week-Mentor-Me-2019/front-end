@@ -11,3 +11,12 @@ export const fetchPosts = () => dispatch => {
                 payload: res.data
             }))
 }
+
+export const postAnswer = () => dispatch => {
+    api()
+        .post('/api/answers')
+        .then(res => dispatch({
+            type: NEW_POST,
+            payload: res
+        }))
+}

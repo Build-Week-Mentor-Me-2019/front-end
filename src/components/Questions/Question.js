@@ -1,6 +1,10 @@
 import React from "react"
 import AnswerList from "../Answers/AnswerList"
-//import styled from 'styled-components'
+
+import AnswerForm from '../Answers/AnswerForm';
+// import styled from 'styled-components'
+
+
 
 const Question = props => {
   return (
@@ -14,6 +18,8 @@ const Question = props => {
 
       {/* Hutch the variable name you will need for the Answer List component is questionid={props.questionid} */}
       <AnswerList question_id={props.questionid} />
+      <AnswerForm question_id={props.questionid} />
+
     </div>
   )
 }
