@@ -10,13 +10,16 @@ import { connect } from 'react-redux';
 
 function Login(props) {
     console.log('login props', props)
-
+    
     const [err, setErr] = useState('')
 
     const [data, setData] = useState({
-        username: 'elonmusk',
-        password: 'space'
+        username: '',
+        password: ''
     })
+    // const [currentUser] = useState(data.username)
+
+    console.log('data.username', data.username)
 
     const handleChange = (event) => {
         setData({

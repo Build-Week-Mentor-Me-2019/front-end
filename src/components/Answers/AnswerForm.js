@@ -12,8 +12,8 @@ function AnswerForm(props) {
 
     const [newAnswer, setNewAnswer] = useState({
         answer: '',
-        question_id: props.questionid,
-        bus_owner_username: '',
+        // question_id: props.questionid,
+        // bus_owner_username: '',
     })
     // componentWillMount() {
     //     this.props.fetchPosts()
@@ -33,8 +33,8 @@ function AnswerForm(props) {
     const handleSubmit = (e) => {
         e.preventDefault()
         
-        axios
-        .post('https://jesse-tingle-mentor-me.herokuapp.com/api/answers')
+        api()
+        .post('/api/answers')
         .then(res => {
             console.log('post answer', res)
             // setNewAnswer(res)
@@ -50,9 +50,9 @@ function AnswerForm(props) {
             <textarea name="answer" placeholder="Answer" value={newAnswer.answer} onChange={handleChange}  />
             <br />
             {/* <input name="question_id" placeholder="Question ID" value={newAnswer.question_id} onChange={handleChange} />
-            <br /> */}
-            <input name="bus_owner_username" placeholder="Business Owner Username" value={newAnswer.bus_owner_username} onChange={handleChange} />
             <br />
+            <input name="bus_owner_username" placeholder="Business Owner Username" value={newAnswer.bus_owner_username} onChange={handleChange} />
+            <br /> */}
             <button type="submit">Submit</button>
         </form>
     )
