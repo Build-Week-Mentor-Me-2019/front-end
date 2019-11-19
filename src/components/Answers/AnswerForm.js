@@ -4,6 +4,11 @@ import { postAnswer } from '../../redux/actions/postActions';
 import api from '../utils/api';
 
 import axios from 'axios';
+
+
+// Style files
+import {AnswerWrapper} from '../../styles/answersStyles';
+
 /*
 Step 1) Create a form to submit a new answer to a question
 */
@@ -46,15 +51,18 @@ function AnswerForm(props) {
     }
 
         return (
-        <form className="answer-form" onSubmit={handleSubmit}>
-            <textarea name="answer" placeholder="Answer" value={newAnswer.answer} onChange={handleChange}  />
-            <br />
-            {/* <input name="question_id" placeholder="Question ID" value={newAnswer.question_id} onChange={handleChange} />
-            <br />
-            <input name="bus_owner_username" placeholder="Business Owner Username" value={newAnswer.bus_owner_username} onChange={handleChange} />
-            <br /> */}
-            <button type="submit">Submit</button>
-        </form>
+
+         <AnswerWrapper >   
+            <form className="answer-form" onSubmit={handleSubmit}>
+                <textarea name="answer" placeholder="Answer" value={newAnswer.answer} onChange={handleChange}  />
+                <br />
+                {/* <input name="question_id" placeholder="Question ID" value={newAnswer.question_id} onChange={handleChange} />
+                <br />
+                <input name="bus_owner_username" placeholder="Business Owner Username" value={newAnswer.bus_owner_username} onChange={handleChange} />
+                <br /> */}
+                <button type="submit">Submit</button>
+            </form>
+        </AnswerWrapper>
     )
     
 }
