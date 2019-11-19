@@ -1,5 +1,8 @@
 import React from "react"
 
+// Style files
+import answerStyles from '../../styles/answersStyles';
+
 const Answer = props => {
   return (
     <div className="answer-wrapper">
