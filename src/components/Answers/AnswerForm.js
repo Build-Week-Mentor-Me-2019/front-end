@@ -7,7 +7,8 @@ import axios from 'axios';
 
 
 // Style files
-import {AnswerWrapper} from '../../styles/answersStyles';
+import { AnswerWrapper } from '../../styles/answersStyles';
+import { SubmitButton } from '../../styles/answersStyles';
 
 /*
 Step 1) Create a form to submit a new answer to a question
@@ -52,7 +53,7 @@ function AnswerForm(props) {
 
         return (
 
-         <AnswerWrapper >   
+        <AnswerWrapper >   
             <form className="answer-form" onSubmit={handleSubmit}>
                 <textarea name="answer" placeholder="Answer" value={newAnswer.answer} onChange={handleChange}  />
                 <br />
@@ -60,9 +61,9 @@ function AnswerForm(props) {
                 <br />
                 <input name="bus_owner_username" placeholder="Business Owner Username" value={newAnswer.bus_owner_username} onChange={handleChange} />
                 <br /> */}
-                <button type="submit">Submit</button>
+                <SubmitButton type="submit">Submit</SubmitButton>
             </form>
-        </AnswerWrapper>
+       </AnswerWrapper>
     )
     
 }
