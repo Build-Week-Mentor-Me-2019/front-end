@@ -2,13 +2,15 @@ import React from "react"
 import AnswerList from "../Answers/AnswerList"
 
 import AnswerForm from '../Answers/AnswerForm';
-// import styled from 'styled-components'
+import { QuestionBar } from '../../styles/questionsStyles';
+import { QuestionWrapper } from '../../styles/questionsStyles';
 
 
 
 const Question = props => {
   return (
-    <div className="question-bar" key={props.id}>
+<QuestionWrapper>
+    <QuestionBar key={props.id}>
       {/* <img className="entrepreneur-avatar"  src={props.img} alt="e-avatar" /> */}
 
       <h1>{props.title}</h1>
@@ -20,7 +22,8 @@ const Question = props => {
       <AnswerList question_id={props.questionid} />
       <AnswerForm question_id={props.questionid} />
 
-    </div>
+    </QuestionBar>
+   </QuestionWrapper>
   )
 }
 export default Question
