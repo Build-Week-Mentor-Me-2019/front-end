@@ -85,6 +85,7 @@ background-color:#194D4A;
   color: rgb(0, 0, 0);
   text-decoration: none;
 height: 100%;
+font-size: 1.6rem;
 
 }
 
@@ -113,8 +114,4 @@ padding-right: 20%;
   margin-right: 0.6rem;
 }
 
-.question-bar {
-  text-align: left;
-  width: 40%;
-  margin-left: 5%;
-}
+/* Submit Form */

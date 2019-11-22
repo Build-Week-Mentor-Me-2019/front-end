@@ -33,6 +33,7 @@ function Signup(props) {
     }
 
     return (
+        <div className='submit-wrapper'>
         <form onSubmit={handleSubmit} disabled={props.loading} /* className={props.loading ? "transparent" : "regular"}*/ >
 
             {err && <div className="err">{err}</div>}
@@ -56,6 +57,7 @@ function Signup(props) {
 
             <button disabled={props.loading} type="submit">Sign Up</button>
         </form>
+    </div>
     )
 }
 
