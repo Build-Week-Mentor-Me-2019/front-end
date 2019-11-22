@@ -1,7 +1,7 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
-import { reducer as loginReducer } from "../reducer/loginReducer";
-import thunk from "redux-thunk";
-import postReducer from "../reducer/postReducer";
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { reducer as loginReducer } from '../reducer/loginReducer';
+import thunk from 'redux-thunk';
+import postReducer from '../reducer/postReducer';
 
 const initialState = {};
 
@@ -12,10 +12,6 @@ const rootReducer = combineReducers({
   loginRed: loginReducer
 });
 
-const store = createStore(
-  rootReducer,
-  initialState,
-  applyMiddleware(...middleware)
-);
+const store = createStore(rootReducer, initialState, applyMiddleware(...middleware));
 
 export default store;

@@ -3,7 +3,7 @@ display: flex;
 flex-flow: row wrap;
 justify-content: center;
 max-width: 2000px;
-height: auto;
+height: 1000px;
 margin: 0 auto;
 background-color:#194D4A;
 }
@@ -42,12 +42,17 @@ background-color:#194D4A;
 
 .regular {
   background: lightblue;
+  display: flex;
+  flex-flow: column wrap;
+  width: 90%;
+  height: 90%;
 }
 
 .radio-btns {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 1rem;
 }
 
 
@@ -117,6 +122,57 @@ padding: 20px 40px 40px 40px;
   margin-right: 0.6rem;
 }
 
+
+/* Login Form Styles */
+
+.login-form {
+    background-color: rgb(8, 31, 29);
+    opacity: .7;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    height: 500px;
+    width: 500px;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-field {
+    margin: 1rem;
+}
+
+.login-button {
+    margin-left: 3rem;
+    padding: .4rem;
+}
+
+/* SignUp Form Styles */
+
+.signup-form {
+    background-color: rgb(8, 31, 29);
+    opacity: .7;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    height: 500px;
+    width: 500px;
+    padding: 3rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-field {
+    margin: 1rem;
+}
+
+.signup-button {
+width: 30%;
+    padding: .4rem;
+    align-self: center;
+}
+
 /* Responsive Breakpoints */
 
 @media only screen and (max-width: 1400px) {
@@ -180,6 +236,35 @@ height: 100%;
 width: 100%;
 font-size: 1.6rem;
 align-self: center;
+}
+
+.signup-form {
+    background-color: rgb(8, 31, 29);
+    opacity: .7;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    height: 450px;
+    width: 450px;
+    padding: 3rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.login-form {
+    background-color: rgb(8, 31, 29);
+    opacity: .7;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    height: 450px;
+    width: 450px;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
 }
 
 }

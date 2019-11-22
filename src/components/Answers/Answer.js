@@ -1,5 +1,4 @@
-import React from "react"
-
+import React from 'react';
 
 // Style files
 //import answersStyles from '../../styles/answersStyles';
@@ -7,14 +6,14 @@ import { AnswerSection } from '../../styles/answersStyles';
 
 const Answer = props => {
   return (
-
-    <AnswerSection className="answer-wrapper">
-      <p>A: {props.answer}
-      <br/>
-      Business Owner Username : {props.bus_owner_username}</p>
+    <AnswerSection className='answer-wrapper'>
+      <p>
+        A: {props.answer}
+        <br />
+        Business Owner Username : {props.bus_owner_username}
+      </p>
     </AnswerSection>
-
-  )
-}
+  );
+};
 
 export default Answer;
