@@ -39,10 +39,13 @@ function Login(props) {
     <div className='login-form'>
       <form onSubmit={handleSubmit} disabled={props.loading} /* className={props.loading ? "transparent" : "regular"}*/>
         {err && <div className='err'>{err}</div>}
-
-        <input type='text' name='username' placeholder='username' value={data.username} onChange={handleChange} />
-        <input type='text' name='password' placeholder='password' value={data.password} onChange={handleChange} />
-        <button disabled={props.loading} type='submit'>
+        <div className='login-field'>
+          <input type='text' name='username' placeholder='username' value={data.username} onChange={handleChange} />
+        </div>
+        <div className='login-field'>
+          <input type='text' name='password' placeholder='password' value={data.password} onChange={handleChange} />
+        </div>
+        <button className='login-button' disabled={props.loading} type='submit'>
           Log In
         </button>
       </form>
