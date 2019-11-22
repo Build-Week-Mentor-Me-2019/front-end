@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import api from "../utils/api";
-import Answer from "./Answer";
+import React, { useState, useEffect } from 'react';
+import api from '../utils/api';
+import Answer from './Answer';
 
 // Style files
 // import {  } from '../../styles/answersStyles';
@@ -35,7 +35,7 @@ export default function AnswerList(props) {
         setAnswers(res.data);
       })
       .catch(err => {
-        console.log("Error, data was not returned from server", err);
+        console.log('Error, data was not returned from server', err);
       });
   }, []);
 
@@ -43,7 +43,6 @@ export default function AnswerList(props) {
 
   return (
     <>
-
       {answers.map(answer => {
         if (questionId === answer.question_id) {
           return (
@@ -56,6 +55,6 @@ export default function AnswerList(props) {
           );
         } else return null;
       })}
-  </>
+    </>
   );
 }

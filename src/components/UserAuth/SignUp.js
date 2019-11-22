@@ -34,22 +34,50 @@ function Signup(props) {
 
   return (
     <div className='signup-form'>
-      <form onSubmit={handleSubmit} disabled={props.loading} className={props.loading ? "transparent" : "regular"}>
+      <form onSubmit={handleSubmit} disabled={props.loading} className={props.loading ? 'transparent' : 'regular'}>
         {err && <div className='err'>{err}</div>}
 
-        <input type='text' name='username' placeholder='username' value={data.username} className='signup-field' onChange={handleChange} />
+        <input
+          type='text'
+          name='username'
+          placeholder='username'
+          value={data.username}
+          className='signup-field'
+          onChange={handleChange}
+        />
         <input type='text' name='name' placeholder='Name' value={data.name} className='signup-field' onChange={handleChange} />
-        <input type='text' name='password' placeholder='password' value={data.password} className='signup-field' onChange={handleChange} />
+        <input
+          type='text'
+          name='password'
+          placeholder='password'
+          value={data.password}
+          className='signup-field'
+          onChange={handleChange}
+        />
 
         <p>Are you a business owner?</p>
         <div className='radio-btns'>
           <div>
-            <input type='radio' name='owner' value='1' checked={data.owner === 1} onChange={handleChange} className='radio-btns' />
+            <input
+              type='radio'
+              name='owner'
+              value='1'
+              checked={data.owner === 1}
+              onChange={handleChange}
+              className='radio-btns'
+            />
             <label>Yes</label>
           </div>
 
           <div>
-            <input type='radio' name='owner' value='0' checked={data.owner === 0} onChange={handleChange} className='radio-btns' />
+            <input
+              type='radio'
+              name='owner'
+              value='0'
+              checked={data.owner === 0}
+              onChange={handleChange}
+              className='radio-btns'
+            />
             <label>No</label>
           </div>
         </div>
