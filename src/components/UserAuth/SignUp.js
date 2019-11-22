@@ -33,14 +33,15 @@ function Signup(props) {
     }
 
     return (
+        <div className='submit-wrapper'>
         <form onSubmit={handleSubmit} disabled={props.loading} /* className={props.loading ? "transparent" : "regular"}*/ >
-            
+
             {err && <div className="err">{err}</div>}
 
             <input type="text" name="username" placeholder="username" value={data.username} onChange={handleChange} />
             <input type="text" name="name" placeholder="Name" value={data.name} onChange={handleChange} />
             <input type="text" name="password" placeholder="password" value={data.password} onChange={handleChange} />
-            
+
             <p>Are you a business owner?</p>
             <div className="radio-btns" >
                 <div>
@@ -56,6 +57,7 @@ function Signup(props) {
 
             <button disabled={props.loading} type="submit">Sign Up</button>
         </form>
+    </div>
     )
 }
 

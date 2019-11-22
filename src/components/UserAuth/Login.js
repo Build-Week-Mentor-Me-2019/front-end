@@ -10,7 +10,7 @@ import { connect } from 'react-redux';
 
 function Login(props) {
     console.log('login props', props)
-    
+
     const [err, setErr] = useState('')
 
     const [data, setData] = useState({
@@ -38,7 +38,7 @@ function Login(props) {
     return (
         <div>
             <form onSubmit={handleSubmit} disabled={props.loading} /* className={props.loading ? "transparent" : "regular"}*/ >
-                
+
                 {err && <div className="err">{err}</div>}
 
                 <input type="text" name="username" placeholder="username" value={data.username} onChange={handleChange} />
