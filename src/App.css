@@ -1,12 +1,27 @@
+.wrapper-main {
+display: flex;
+flex-flow: row wrap;
+justify-content: center;
+max-width: 2000px;
+height: auto;
+margin: 0 auto;
+background-color:#194D4A;
+}
+
 .App {
-  text-align: center;
+    margin-top: 200px;
 }
 
-.App-logo {
-  height: 40vmin;
+.logo {
+    display: inline-block;
+    box-sizing: border-box;
+    height: inherit;
+    width: inherit;
+    margin-right: 1200px;
 }
 
-.App-header {
+
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -15,7 +30,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #09d3ac;
@@ -38,7 +53,7 @@
 
 
 :root {
-  --primary-color: #dc3545;
+  --primary-color: #248ea9;
   --dark-color: #333333;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
@@ -55,23 +70,39 @@
 
 /* Navbar */
 .navbar {
+    height: 200px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.7rem 2rem;
-  z-index: 1;
-  opacity: 0.9;
+  width: 100%;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
   margin-bottom: 1rem;
+  background-color: #248ea9;
+  position: fixed;
+}
+
+
+.navbar a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+height: 100%;
+
 }
 
 .navbar ul {
-  display: flex;
+height: 90%;
+    width: 500px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.navbar a {
-  color: #fff;
-  padding: 0.45rem;
-  margin: 0 0.25rem;
+.navbar li {
+list-style-type: none;
+padding-top: 15%;
+padding-bottom: 15%;
+padding-right: 20%;
+
 }
 
 .navbar a:hover {

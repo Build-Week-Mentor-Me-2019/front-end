@@ -12,7 +12,7 @@ export const QuestionBar = styled.div`
 background: #28c3d4;
 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 border-radius: 10px;
-text-align: left;
+text-align: justify;
 padding: 0 40px;
 font-size: 20px;
 width: 75%;
@@ -23,6 +23,6 @@ h1 {
     margin-top: -20px 0 30px 0;
     background: #fafdcb;
     width: 100%;
-    
+
 }
 `;
