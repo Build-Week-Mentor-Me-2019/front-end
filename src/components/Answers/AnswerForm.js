@@ -55,7 +55,7 @@ function AnswerForm(props) {
 
         <AnswerWrapper >   
             <form className="answer-form" onSubmit={handleSubmit}>
-                <textarea name="answer" placeholder="Answer" value={newAnswer.answer} onChange={handleChange}  />
+                <textarea name="answer" rows="4" cols="50" placeholder="Answer" value={newAnswer.answer} onChange={handleChange}  />
                 <br />
                 {/* <input name="question_id" placeholder="Question ID" value={newAnswer.question_id} onChange={handleChange} />
                 <br />

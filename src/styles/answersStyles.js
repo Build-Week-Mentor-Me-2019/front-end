@@ -5,8 +5,9 @@ import styled from 'styled-components'
 
 // styles for AnswerForm.js
  
-export const AnswerWrapper = styled.div `
-margin: 10px;
+export const AnswerWrapper = styled.div`
+margin: 40px;
+padding: 10px;
 `;
 
 export const SubmitButton = styled.button`
@@ -23,7 +24,18 @@ border: none;
 
 //Styles for Answer.js
 
-export const AnswerSection = styled.div `
+export const AnswerContainer = styled.div`
 margin-left: 50px;
 font-size: 1.5rem;
+background: white;
+border-radius: 5px;
+display: flex;
+flex-direction: column;
+margin-bottom: 20px;
+font-family: 'PT Sans Narrow', sans-serif;
+
+p {
+margin: 10px;
+padding: 10px;
+}
 `;

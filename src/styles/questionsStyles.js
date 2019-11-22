@@ -16,6 +16,7 @@ text-align: left;
 padding: 0 40px;
 font-size: 20px;
 width: 75%;
+font-family: 'Raleway', sans-serif;
 
 h1 {
     font-size: 2.5rem;
@@ -23,6 +24,10 @@ h1 {
     margin-top: -20px 0 30px 0;
     background: #fafdcb;
     width: 100%;
-    
 }
 `;
+
+export const Username = styled.p`
+font-style: italic;
+`;
+
