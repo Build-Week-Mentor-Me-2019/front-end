@@ -2,21 +2,21 @@
 display: flex;
 flex-flow: row wrap;
 justify-content: center;
-max-width: 2000px;
-height: 100%;
+max-width: 1600px;
+height: 2000px;
 margin: 0 auto;
 background-color:#194D4A;
 }
 
 .App {
-    margin-top: 200px;
+    margin-top: 130px;
 }
 
 .logo {
     display: inline-block;
     box-sizing: border-box;
-    height: 150px;
-    width: 150px;
+    height: 130px;
+    width: 130px;
 }
 
 
@@ -74,7 +74,7 @@ background-color:#194D4A;
 
 /* Navbar */
 .navbar {
-    height: 150px;
+    height: 130px;
   display: flex;
   width: 100%;
   flex-flow: row nowrap;
@@ -95,12 +95,12 @@ font-size: 1.6rem;
 
 #home-link {
     height: 100%;
-    width: 150px;
+    width: 130px;
     margin-right: 1200px;
 }
 
 .navbar ul {
-    height: 150px;
+    height: 120px;
     width: 500px;
     display: flex;
     flex-flow: row nowrap;
