@@ -1,7 +1,6 @@
-
-import React, { useState, useEffect } from "react";
-import api from "../utils/api";
-import Answer from "./Answer";
+import React, { useState, useEffect } from 'react';
+import api from '../utils/api';
+import Answer from './Answer';
 
 // Style files
 // import {  } from '../../styles/answersStyles';
@@ -28,40 +27,22 @@ export default function AnswerList(props) {
   const [questionId] = useState(props.question_id);
   const [answers, setAnswers] = useState([]);
 
-
   // Making my API call...
   useEffect(() => {
     api()
       .get(`/api/answers`)
       .then(res => {
-
         setAnswers(res.data);
       })
       .catch(err => {
-        console.log("Error, data was not returned from server", err);
+        console.log('Error, data was not returned from server', err);
       });
   }, []);
 
   //  Syncing state with my async API call...
 
   return (
-    <section className="answers">
-
-      {/* { answers.map(answer => {
-    {if(questionId == answer.question_id) {
-           return(
-               <Answer
-            key={answer.id}
-            answer={answer.answer}
-            question_id={answer.question_id}
-            bus_owner_username={answer.bus_owner_username}
-            />
-           )
-        } else return null
-    }
-    })} */}
-
-
+    <>
       {answers.map(answer => {
         if (questionId === answer.question_id) {
           return (
@@ -74,7 +55,6 @@ export default function AnswerList(props) {
           );
         } else return null;
       })}
-    </section>
+    </>
   );
 }
-

@@ -1,8 +1,7 @@
 import React from 'react';
 import { withFormik, Form, Field } from "formik";
 import * as Yup from "yup";
-import axios from 'axios';
-
+//import axios from 'axios';
 
 function QuestionForm({ values, touched, errors }) {
     return (
@@ -38,7 +37,7 @@ const FormikQuestionForm = withFormik({
     validationSchema: Yup.object().shape({
         title: Yup.string().required("You need a title."),
         question: Yup.string(),
-        business_type: Yup.string().required("What's your type of business?")
+        business_type: Yup.string().required("Enter type of business.")
 
     }),
 
