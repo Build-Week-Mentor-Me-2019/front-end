@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { connect } from 'react-redux';
-import { postAnswer } from '../../redux/actions/postActions';
+//import { connect } from 'react-redux';
+//import { postAnswer } from '../../redux/actions/postActions';
 import { withFormik, Form, Field } from 'formik';
+import * as Yup from 'yup';
 
 import axios from 'axios';
 
 // Style files
-import { AnswerWrapper } from '../../styles/answersStyles';
 import { SubmitButton } from '../../styles/answersStyles';
 
 /*
@@ -51,20 +51,18 @@ const AnswerForm = ({ values, touched, errors }) => {
   // }
 
   return (
-    <AnswerWrapper>
-      <Form className='answer-form' onSubmit={handleSubmit}>
-        <Field type='textarea' name='answer' placeholder='Answer' value={values.answer} />
-        {touched.answer && errors.answer && <p>{errors.answer}</p>}
-        <br />
-        <Field type='text' name='question_id' placeholder='Question ID' value={values.question_id} />
-        {touched.question_id}
-        <br />
+      <Form className='answer-form'>
+        <Field component='textarea' name='answer' placeholder='Answer' value={values.answer} />
+        {/* {touched.answer && errors.answer && <p>{errors.answer}</p>} */}
+     
+        {/* <Field type='text' name='question_id' placeholder='Question ID' value={values.question_id} />
+        {touched.question_id} */}
+   
         <Field type='text' name='bus_owner_username' placeholder='Business Owner Username' value={values.bus_owner_username} />
         {touched.bus_owner_username && errors.bus_owner_username && <p>{errors.bus_owner_username}</p>}
-        <br />
+     
         <SubmitButton type='submit'>Submit</SubmitButton>
       </Form>
-    </AnswerWrapper>
   );
 };
 

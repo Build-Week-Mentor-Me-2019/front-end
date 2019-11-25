@@ -3,9 +3,6 @@
 import styled from 'styled-components';
 
 export const QuestionWrapper = styled.div`
-  margin: 30px;
-  display: flex;
-  justify-content: center;
   padding: 2rem;
 `;
 
@@ -17,6 +14,10 @@ export const QuestionBar = styled.div`
   padding: 3.5rem;
   font-size: 20px;
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
 
   h1 {
     font-size: 2.5rem;
@@ -24,23 +25,23 @@ export const QuestionBar = styled.div`
     background: #fafdcb;
     width: 100%;
     text-align: center;
-    border: 3px solid #000000;
     padding: 0.7rem;
   }
 
-  h2 {
-    border: 3px solid #000000;
-    padding: 1rem;
-    border-radius: 10px;
-  }
-
-  h3 {
-    text-align: center;
-    margin-right: 50px;
-  }
-
   p {
-    width: 90%;
-    text-align: center;
+    font-size: 22px;
   }
 `;
+
+export const Username = styled.p`
+font-style: italic;
+font-size: 22px;
+`;
+
+export const Quest = styled.div`
+border: 3px solid #000000;
+border-radius: 10px;
+padding: 1rem
+background: lightgrey;
+`;
+

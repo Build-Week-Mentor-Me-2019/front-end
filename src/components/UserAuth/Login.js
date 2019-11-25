@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import api from '../utils/api';
+//import api from '../utils/api';
 
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 // import { initialState, reducer } from '../../reducer/loginReducer';
 
@@ -11,7 +11,7 @@ import { connect } from 'react-redux';
 function Login(props) {
   console.log('login props', props);
 
-  const [err, setErr] = useState('');
+ // const [err, setErr] = useState('');
 
   const [data, setData] = useState({
     username: '',
@@ -38,7 +38,7 @@ function Login(props) {
   return (
     <div className='login-form'>
       <form onSubmit={handleSubmit} disabled={props.loading} /* className={props.loading ? "transparent" : "regular"}*/>
-        {err && <div className='err'>{err}</div>}
+        {/* {err && <div className='err'>{err}</div>} */}
         <div className='login-field'>
           <input type='text' name='username' placeholder='username' value={data.username} onChange={handleChange} />
         </div>

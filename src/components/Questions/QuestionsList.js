@@ -23,7 +23,6 @@ export default function QuestionsList() {
       .then(response => {
         const quest = response.data;
         console.log(response.data);
-        //nothing is returned when I console.log//
         setQuestions(quest);
       })
       .catch(error => {
@@ -33,8 +32,6 @@ export default function QuestionsList() {
 
   return (
     <div>
-      {/* <h1>Questions List Component</h1> */}
-
       {questions.map(entry => {
         return (
           <Question

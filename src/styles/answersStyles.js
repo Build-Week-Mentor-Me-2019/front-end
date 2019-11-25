@@ -2,15 +2,18 @@
 import styled from 'styled-components';
 
 // styles for AnswerForm.js
-
+ 
 export const AnswerWrapper = styled.div`
-  margin: 10px;
+margin: 40px;
+padding: 10px;
+display: flex;
+flex-direction: column;
 `;
 
 export const SubmitButton = styled.button`
-  width: 140px;
+  width: 135px;
   padding: 10px;
-  margin: 5px;
+  margin-top: 20px;
   border: none;
   border-radius: 12px;
   font-size: 20px;
@@ -22,13 +25,15 @@ export const SubmitButton = styled.button`
 //Styles for Answer.js
 
 export const AnswerSection = styled.div`
-  ${'' /* margin-left: 50px; */}
   font-size: 1.5rem;
+  border-radius: 10px;
+  border: 3px solid #000000;
+  padding: 1rem;
+  width: 60%;
+  margin: 30px;
+  background: lightgrey;
 
   p {
-    border: 2px solid #000000;
-    padding: 1rem;
-    border-radius: 10px;
-    display: flex;
+  
   }
 `;

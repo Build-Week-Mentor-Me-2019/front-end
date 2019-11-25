@@ -1,17 +1,13 @@
 import React from 'react';
-
 // Style files
-//import answersStyles from '../../styles/answersStyles';
 import { AnswerSection } from '../../styles/answersStyles';
+import { Username } from '../../styles/questionsStyles';
 
 const Answer = props => {
   return (
-    <AnswerSection className='answer-wrapper'>
-      <p>
-        A: {props.answer}
-        <br />
-        Business Owner Username : {props.bus_owner_username}
-      </p>
+      <AnswerSection>
+      <p>A: {props.answer}</p>
+      <Username>Business Owner Username : {props.bus_owner_username}</Username>
     </AnswerSection>
   );
 };

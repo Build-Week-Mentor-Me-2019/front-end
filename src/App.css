@@ -1,24 +1,23 @@
 .wrapper-main {
-display: flex;
-flex-flow: row wrap;
-justify-content: center;
-max-width: 1600px;
-height: 2000px;
-margin: 0 auto;
-background-color:#194D4A;
+  display: flex;
+  flex-flow: row wrap;
+  justify-items: center;
+  background: -webkit-linear-gradient(90deg, #fafdcb, #aee7e8);
+  background: linear-gradient(90deg, #fafdcb, #aee7e8);
 }
 
 .App {
-    margin-top: 130px;
+  margin-top: 130px;
+  display: flex;
+  align-content: center;
 }
 
 .logo {
-    display: inline-block;
-    box-sizing: border-box;
-    height: 130px;
-    width: 130px;
+  display: inline-block;
+  box-sizing: border-box;
+  height: 130px;
+  width: 130px;
 }
-
 
 /* .App-header {
   background-color: #282c34;
@@ -37,7 +36,7 @@ background-color:#194D4A;
 
 .transparent {
   background: red;
-  opacity: .2;
+  opacity: 0.2;
 }
 
 .regular {
@@ -54,7 +53,6 @@ background-color:#194D4A;
   justify-content: center;
   margin: 1rem;
 }
-
 
 :root {
   --primary-color: #248ea9;
@@ -74,44 +72,42 @@ background-color:#194D4A;
 
 /* Navbar */
 .navbar {
-    height: 130px;
+  height: 130px;
   display: flex;
   width: 100%;
   flex-flow: row nowrap;
   justify-content: space-evenly;
-  margin-bottom: 1rem;
-  background-color: #248ea9;
+  margin-bottom: 2rem;
+  background: linear-gradient(-45deg, #fafdcb, #aee7e8, #28c3d4, #248ea9);
   position: fixed;
+  justify-content: space-between;
 }
 
-
 .navbar a {
-  color: rgb(0, 0, 0);
+  color: black;
   text-decoration: none;
-height: 100%;
-font-size: 1.6rem;
-
+  height: 100%;
+  font-size: 1.6rem;
 }
 
 #home-link {
-    height: 100%;
-    width: 130px;
-    margin-right: 1200px;
+  height: 100%;
+  width: 130px;
 }
 
 .navbar ul {
-    height: 120px;
-    width: 500px;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: flex-end;
-    white-space: nowrap;
+  height: 120px;
+  width: 500px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  white-space: nowrap;
 }
 
 .navbar li {
-list-style-type: none;
-padding: 20px 40px 40px 40px;
+  list-style-type: none;
+  padding: 20px 40px 40px 40px;
 }
 
 .navbar a:hover {
@@ -122,95 +118,101 @@ padding: 20px 40px 40px 40px;
   margin-right: 0.6rem;
 }
 
+.answer-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 30%;
+
+}
 
 /* Login Form Styles */
 
 .login-form {
-    background-color: rgb(8, 31, 29);
-    opacity: .7;
-    border: 2px solid #ffffff;
-    border-radius: 10px;
-    height: 500px;
-    width: 500px;
-    padding: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: rgb(8, 31, 29);
+  opacity: 0.7;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  height: 500px;
+  width: 500px;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .login-field {
-    margin: 1rem;
+  margin: 1rem;
 }
 
 .login-button {
-    margin-left: 3rem;
-    padding: .4rem;
+  margin-left: 3rem;
+  padding: 0.4rem;
 }
 
 /* SignUp Form Styles */
 
 .signup-form {
-    background-color: rgb(8, 31, 29);
-    opacity: .7;
-    border: 2px solid #ffffff;
-    border-radius: 10px;
-    height: 500px;
-    width: 500px;
-    padding: 3rem;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
+  background-color: rgb(8, 31, 29);
+  opacity: 0.7;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  height: 500px;
+  width: 500px;
+  padding: 3rem;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .signup-field {
-    margin: 1rem;
+  margin: 1rem;
 }
 
 .signup-button {
-width: 30%;
-    padding: .4rem;
-    align-self: center;
+  width: 30%;
+  padding: 0.4rem;
+  align-self: center;
 }
 
 /* Responsive Breakpoints */
 
 @media only screen and (max-width: 1400px) {
-
-.App {
+  .App {
     margin-top: 300px;
-}
+  }
 
-.wrapper-main {
-width: 100vw;
-}
+  .wrapper-main {
+    width: 100vw;
+  }
 
-.navbar {
+  .navbar {
     height: min-content;
-  display: flex;
-  width: 100vw;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1rem;
-  background-color: #248ea9;
-  position: fixed;
-}
+    display: flex;
+    width: 100vw;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    background-color: #248ea9;
+    position: fixed;
+  }
 
-.logo {
+  .logo {
     display: inline-block;
     box-sizing: border-box;
     height: 150px;
     width: 150px;
-}
+  }
 
-#home-link {
+  #home-link {
     height: 150px;
     width: 150px;
     margin: 1rem;
-}
+  }
 
-.navbar ul {
+  .navbar ul {
     height: auto;
     display: flex;
     flex-flow: column wrap;
@@ -219,28 +221,28 @@ width: 100vw;
     width: 100%;
     margin: 0;
     padding: 0;
-}
+  }
 
-.navbar li {
-list-style-type: none;
-padding: 20px;
-width: 100%;
-border-bottom: 2px solid #000000;
-text-align: center;
-}
+  .navbar li {
+    list-style-type: none;
+    padding: 20px;
+    width: 100%;
+    border-bottom: 2px solid #000000;
+    text-align: center;
+  }
 
-.navbar a {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-height: 100%;
-width: 100%;
-font-size: 1.6rem;
-align-self: center;
-}
+  .navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    align-self: center;
+  }
 
-.signup-form {
+  .signup-form {
     background-color: rgb(8, 31, 29);
-    opacity: .7;
+    opacity: 0.7;
     border: 2px solid #ffffff;
     border-radius: 10px;
     height: 450px;
@@ -251,11 +253,11 @@ align-self: center;
     align-items: center;
     justify-content: center;
     margin-top: 60px;
-}
+  }
 
-.login-form {
+  .login-form {
     background-color: rgb(8, 31, 29);
-    opacity: .7;
+    opacity: 0.7;
     border: 2px solid #ffffff;
     border-radius: 10px;
     height: 450px;
@@ -265,6 +267,5 @@ align-self: center;
     align-items: center;
     justify-content: center;
     margin-top: 60px;
-}
-
+  }
 }
